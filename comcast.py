@@ -25,40 +25,6 @@ class ComcastSpider(scrapy.Spider):
     name = 'comcast'
     allowed_domains = ['forums.xfinity.com']
     start_urls = ["https://forums.xfinity.com//",]
-#     start_urls = [u'https://forums.xfinity.com/t5/Your-Home-Network/bd-p/YHN',
-#  u'https://forums.xfinity.com/t5/Email-Web-Browsing/bd-p/EWB',
-#  u'https://forums.xfinity.com/t5/Anti-Virus-Software-Internet-Security/bd-p/13',
-#  u'https://forums.xfinity.com/t5/Xfinity-xFi/bd-p/XFApp',
-#  u'https://forums.xfinity.com/t5/X1/bd-p/X1',
-#  u'https://forums.xfinity.com/t5/On-Demand/bd-p/CTV_OnDemand',
-#  u'https://forums.xfinity.com/t5/Non-X1-Service/bd-p/CTV_Equip',
-#  u'https://forums.xfinity.com/t5/Channels-and-Programming/bd-p/CTV_Channel_Prog',
-#  u'https://forums.xfinity.com/t5/XFINITY-Stream-Website/bd-p/OnlineHelpTV',
-#  u'https://forums.xfinity.com/t5/Accessibility/bd-p/ACB',
-#  u'https://forums.xfinity.com/t5/Home-Phone-Features/bd-p/47',
-#  u'https://forums.xfinity.com/t5/Home-Phone-Service-Equipment/bd-p/Voice_Equipments',
-#  u'https://forums.xfinity.com/t5/Xfinity-Mobile/bd-p/XM',
-#  u'https://forums.xfinity.com/t5/Stream-TV-App/bd-p/TVG-APP',
-#  u'https://forums.xfinity.com/t5/Xfinity-My-Account-App/bd-p/XMAP',
-#  u'https://forums.xfinity.com/t5/Xfinity-Connect-App/bd-p/XCA',
-#  u'https://forums.xfinity.com/t5/Xfinity-Home-App/bd-p/XHA',
-#  u'https://forums.xfinity.com/t5/Xfinity-Home-Self-Help-and-Troubleshooting-Articles/bd-p/XH-KB',
-#  u'https://forums.xfinity.com/t5/Devices-and-Equipment/bd-p/DevicesandEquip',
-#  u'https://forums.xfinity.com/t5/Rules-and-Automations/bd-p/RulesandAutomations',
-#  u'https://forums.xfinity.com/t5/Web-Portal/bd-p/WebPortal',
-#  u'https://forums.xfinity.com/t5/Billing/bd-p/AccMngt_Bill',
-#  u'https://forums.xfinity.com/t5/Customer-Service/bd-p/CustServ_CustServ',
-#  u'https://forums.xfinity.com/t5/My-Account-Sign-In-Xfinity-Website/bd-p/ComcastSignIn',
-#  u'https://forums.xfinity.com/t5/Internet/tkb-p/Internet-TKB',
-#  u'https://forums.xfinity.com/t5/TV/tkb-p/TV-TKB',
-#  u'https://forums.xfinity.com/t5/Phone/tkb-p/Phone-TKB',
-#  u'https://forums.xfinity.com/t5/Home-Security-Control/tkb-p/Security-TKB',
-#  u'https://forums.xfinity.com/t5/Mobile-Apps/tkb-p/Mobile-TKB',
-#  u'https://forums.xfinity.com/t5/My-Account/tkb-p/Account-TKB',
-#  u'https://forums.xfinity.com/t5/Getting-Started/bd-p/StttingStarted',
-#  u'https://forums.xfinity.com/t5/Announcements/bd-p/Announcement',
-#  u'https://forums.xfinity.com/t5/Guidelines/bd-p/Guidelines']
-     
         
     rules = [
         Rule(sle(allow=("https://forums.xfinity.com//")), callback='parse',follow=True),
